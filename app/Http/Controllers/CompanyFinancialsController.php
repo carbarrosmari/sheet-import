@@ -94,8 +94,7 @@ class CompanyFinancialsController extends Controller
                 switch ($header) {
                     case 'EMAIL':
                         if(CompanyFinancials::where('email', $rowArray[$header])->first()){
-
-                            $emailRegistered .= $rowArray[$key]['email'] . ", ";
+                            $emailRegistered .= $rowArray[$header] . ", ";
                         }
                         break;
                     case 'VENCIMENTO':
