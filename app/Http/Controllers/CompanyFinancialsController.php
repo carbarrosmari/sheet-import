@@ -26,7 +26,6 @@ class CompanyFinancialsController extends Controller
         if (($request->value != $financials->value && $request->due_date < date('Y-m-d')) || 
             ($request->due_date < date('Y-m-d') && (float) $request->fees != (float) $financials->fees)) 
         {
-            dd('caiu aqui 1');
             $newValue = (float) $request->value * (1 + ((float) $request->fees / 100));
         }
 
